@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Button JS</title>
+        <link rel="stylesheet" href="buttonStyles.css" type="text/css">
+    </head>
+    <body>
+
+        <section id="bb1" class="bigbox">
+            <h3 class="subtitle">Challenge 1</h3>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <button onclick="nightmode()">Night Mode</button>
+        </section>
+
+        <section id="bb2" class="bigbox">
+            <h3 class="subtitle">Challenge 2</h3>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <button onclick="">Toggle Day/Night Mode</button>
+        </section>
+
+        <section id="bb3" class="bigbox">
+            <h3 class="subtitle">Challenge 3</h3>
+            <div class="content gp">
+                <p>Gramps</p>
+                <div class="p">
+                    <p>Pops</p>
+                    <div class="c">
+                        <p>Me</p>
+                    </div>
+                    <div class="c">
+                        <p>Bro</p>
+                    </div>
+                </div>
+            </div>
+            <button onclick="family()">The Family Blood Line</button>
+        </section>
+
+        <section id="bb4" class="bigbox">
+            <h3 class="subtitle">Challenge 4</h3>
+            <div class="content">
+                <ul>
+                    <li>thing 1</li>
+                    <li>thing 2</li>
+                    <li class="fish">one fish</li>
+                    <li class="fish">two fish</li>
+                    <li class="fish">red fish</li>
+                    <li class="fish">blue fish</li>
+                </ul>
+            </div>
+            <button onclick="">Technicolor Fish</button>
+        </section>
+
+        <section id="bb5" class="bigbox">
+            <h3 class="subtitle">Challenge 5</h3>
+            <div class="content">
+                <span>20</span>
+            </div>
+            <br>
+            <button onclick="">+1</button>
+            <button onclick="">+10</button>
+        </section>
+    </body>
+    <script type="text/javascript">
+        //type your code for each button below the series of comments.  All javascript must be inside the script-tags
+        //function 1
+        function nightmode(){
+            const doc =document;
+            let section1 =doc.querySelector('#bb1');
+            let subtitle =doc.querySelector('#bb1>h3');
+            let path =doc.querySelector('#bb1>div>p');
+            section1.style.backgroundColor ='#000000';
+            subtitle.style.color= "#ffffff";
+            path.style.color="#ffffff";
+        }
+
+        //function 2
+
+        //function 3
+        function family(){
+            const doc =document;
+            let g =doc.querySelector('#bb3>div');
+            let p =doc.querySelector('#bb3>div');
+            let c =doc.getElementsByClassName('c');
+            g.style.color ='#550000';
+            p.style.color ='#991100';
+            c[0].style.color ='#dd1111';
+            c[1].style.color ='#dd1111';
+
+        }
+        //function 4
+        function AddOne(){
+            const doc =document;
+            let counter =doc.querySelector('#bb5>div>span');
+        }
+        //function 5 & 6
+
+    </script>
+</html>
