@@ -61,8 +61,8 @@
                 <span>20</span>
             </div>
             <br>
-            <button onclick="">+1</button>
-            <button onclick="">+10</button>
+            <button onclick="AddOne()">+1</button>
+            <button onclick="AddTen()">+10</button>
         </section>
     </body>
     <script type="text/javascript">
@@ -79,6 +79,16 @@
         }
 
         //function 2
+        function daymode(){
+            const doc =document;
+            let section1 =doc.querySelector('#bb2');
+            let subtitle =doc.querySelector('#bb2>h3');
+            let path =doc.querySelector('#bb2>div>p');
+            section1.style.backgroundColor ='#000000';
+            subtitle.style.color= "#ffffff";
+            path.style.color="#ffffff";
+
+        }
 
         //function 3
         function family(){
@@ -93,11 +103,35 @@
 
         }
         //function 4
+        function fish(){
+            const doc=document;
+            let fish =doc.querySelector('bb4>content>ul');
+            MyClass myClassArray[]; 
+            let firstfish = array[0];
+            let secondfish= array[1];
+            let thirdfish= array[2];
+            let fourthfish= array[3];
+            thirdfish.style.color='#dd1111';
+            fourthfish.style.color='#00FFFF';
+
+        }
+
+        //function 5 & 6
         function AddOne(){
             const doc =document;
             let counter =doc.querySelector('#bb5>div>span');
+            let value = counter.innerHTML;
+            value++;
+            counter.innerHTML = value;
         }
-        //function 5 & 6
+
+        function AddTen(){
+            const doc =document;
+            let counter =doc.querySelector('#bb5>div>span');
+            let value = counter.innerHTML;
+            value+10;
+            counter.innerHTML = value;
+        }
 
     </script>
 </html>
