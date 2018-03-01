@@ -20,7 +20,7 @@
             <div class="content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-            <button onclick="">Toggle Day/Night Mode</button>
+            <button onclick="daymode()">Toggle Day/Night Mode</button>
         </section>
 
         <section id="bb3" class="bigbox">
@@ -52,7 +52,7 @@
                     <li class="fish">blue fish</li>
                 </ul>
             </div>
-            <button onclick="">Technicolor Fish</button>
+            <button onclick="fish()">Technicolor Fish</button>
         </section>
 
         <section id="bb5" class="bigbox">
@@ -84,9 +84,9 @@
             let section1 =doc.querySelector('#bb2');
             let subtitle =doc.querySelector('#bb2>h3');
             let path =doc.querySelector('#bb2>div>p');
-            section1.style.backgroundColor ='#000000';
-            subtitle.style.color= "#ffffff";
-            path.style.color="#ffffff";
+            ssection1.classlist.toggle('daymode');
+            subtitle.classlist.toggle('daymode');
+            path.classlist.toggle('daymode');
 
         }
 
@@ -105,14 +105,13 @@
         //function 4
         function fish(){
             const doc=document;
-            let fish =doc.querySelector('bb4>content>ul');
-            MyClass myClassArray[]; 
-            let firstfish = array[0];
-            let secondfish= array[1];
-            let thirdfish= array[2];
-            let fourthfish= array[3];
-            thirdfish.style.color='#dd1111';
-            fourthfish.style.color='#00FFFF';
+            let fish =doc.querySelectorAll('.fish');
+            let firstfish = fish[0];
+            let secondfish= fish[1];
+            let redfish= fish[2];
+            let bluefish= fish[3];
+            redfish.style.color='#dd1111';
+            bluefish.style.color='#00FFFF';
 
         }
 
@@ -121,7 +120,7 @@
             const doc =document;
             let counter =doc.querySelector('#bb5>div>span');
             let value = counter.innerHTML;
-            value++;
+            value = value+1;
             counter.innerHTML = value;
         }
 
@@ -129,7 +128,7 @@
             const doc =document;
             let counter =doc.querySelector('#bb5>div>span');
             let value = counter.innerHTML;
-            value+10;
+            value = value+10;
             counter.innerHTML = value;
         }
 
