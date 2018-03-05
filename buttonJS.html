@@ -84,11 +84,11 @@
             let section2 =doc.querySelector('#bb2');
             let subtitle2 =doc.querySelector('#bb2>h3');
             let path2 =doc.querySelector('#bb2>div>p');
-              section2.classlist.toggle('daymode');
-              subtitle2.classlist.toggle('daymode');
-              path2.classlist.toggle('daymode');
+              section2.classList.toggle('daymode');
+
 
         }
+        //fix toggle and/or class
 
         //function 3
         function family(){
@@ -119,7 +119,7 @@
         function AddOne(){
             const doc =document;
             let counter =doc.querySelector('#bb5>div>span');
-            let value = counter.innerHTML;
+              let value = Number(counter.innerHTML);
             value = value+1;
             counter.innerHTML = value;
         }
@@ -127,10 +127,11 @@
         function AddTen(){
             const doc =document;
             let counter =doc.querySelector('#bb5>div>span');
-            let value = counter.innerHTML;
+            let value = Number(counter.innerHTML);
             value = value+10;
             counter.innerHTML = value;
         }
+
 
     </script>
 </html>
